@@ -22,7 +22,9 @@ const Sum = () => {
       <h4>Sum</h4>
       <input className="inputLine" onChange={updateNumber1}></input>
       <input className="inputLine" onChange={updateNumber2}></input>
-      <button className="confirmationButton" onClick={add}></button>
+      <button className="confirmationButton" onClick={add}>
+        SUM
+      </button>
       <span className="resultsBox">Sum: {sum}</span>
     </div>
   );

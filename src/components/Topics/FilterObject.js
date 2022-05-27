@@ -28,8 +28,11 @@ const FilterObject = () => {
       <h4>Filter Object</h4>
       <span className="puzzleText">{JSON.stringify(unFilteredArray)}</span>
       <input className="inputLine" onChange={getUserInput}></input>
-      <button className="confirmationButton" onClick={clickObject}></button>
+      <button className="confirmationButton" onClick={clickObject}>
+        Filter
+      </button>
       <span className="resultBox filterObjectRB">
+        Filtered Object
         {JSON.stringify(filteredArray)}
       </span>
     </div>

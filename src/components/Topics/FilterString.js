@@ -21,7 +21,7 @@ const FilterString = () => {
   const clickedObject = () => {
     let results = [];
     unFilteredArray.map(
-      (user) => user.includes(userInput) && results.push(user)
+      (person) => person.includes(userInput) && results.push(person)
     );
     setFilteredArray(results);
   };
@@ -29,11 +29,13 @@ const FilterString = () => {
   return (
     <div className="puzzleBox filterStringPB">
       <h4>FilterString</h4>
-      <span className="puzzleText">{JSON.stringify(unFilteredArray)}</span>
-      <input className="inputLine"> onChange={getUserInputs}</input>
-      <button className="confirmationButton"> onClick={clickedObject}</button>
+      <span className="puzzleText">{unFilteredArray}</span>
+      <input className="inputLine" onChange={getUserInputs}></input>
+      <button className="confirmationButton" onClick={clickedObject}>
+        Filter
+      </button>
       <span className="resultsBox filterStringRB">
-        {JSON.stringify(filteredArray)}
+        Filtered String: {filteredArray}
       </span>
     </div>
   );
